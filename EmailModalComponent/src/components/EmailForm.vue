@@ -1,6 +1,6 @@
 <template>
   
-  <form @submit.prevent=" " >
+  <form @submit.prevent="submit">
     
     <TextInput
       id="subject"
@@ -39,6 +39,22 @@
     subjectError.value = '';
     return true;
   };
+
+  
+
+  // Submits the form
+  const submit = () => {
+    
+    if (validateSubject()) {
+      const formData = {
+        subject: subject.value
+      };
+    } 
+    else {
+      console.log('Validation failed .');
+    }
+};
+
 
 </script>
 

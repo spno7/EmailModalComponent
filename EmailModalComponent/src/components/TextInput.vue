@@ -17,6 +17,9 @@
       ref="inputElement"
     />
 
+    <!-- Display error message -->
+    <div v-if="error" class="invalid-feedback d-block">{{ error }}</div>
+
   </div>
 </template>
 
