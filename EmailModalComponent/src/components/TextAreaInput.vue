@@ -5,64 +5,64 @@
     <label v-if="label">
       {{ label }}
     </label>
-    
-    <input
+
+    <textarea
       :id="id"
-      :type="type"
       :value="value"
       :placeholder="placeholder"
       :required="required"
+      :rows="rows"
       @input="handleInput"
       class="form-control rounded-md"
       :class="{ 'is-invalid': error }"
     />
-
-    <!-- Display error message -->
-    <div v-if="error" class="invalid-feedback d-block">{{ error }}</div>
-
+      
   </div>
 </template>
 
 <script setup>
-  import { ref } from 'vue';
 
-  // Component Props
+  // Define props that this component accepts
   const props = defineProps({
-    
     id: { 
       type: String,
       required: true
     },
-
     label: { 
       type: String,
       default: ''
     },
-
     value: { 
       type: String,
       default: ''
     },
-
     placeholder: { 
       type: String,
       default: ''
     },
-
-    type: { 
-      type: String,
-      default: 'text'
-    },
-
     required: { 
       type: Boolean,
       default: false
     },
-
+    rows: { 
+      type: [String, Number],
+      default: 5
+    },
     error: { 
       type: String,
       default: ''
+    },
+    showCharCount: { 
+      type: Boolean,
+      default: false
+    },
+    maxLength: {
+      type: [String, Number],
+      default: 1000
     }
   });
 
+
 </script>
+
+
