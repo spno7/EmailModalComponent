@@ -16,14 +16,12 @@
             <button type="button" class="btn-close" aria-label="Close" @click="closeModal"> 
             </button>
 
-
           </div>
+          
           <div class="modal-body">
-              <!-- TODO: Add the form here -->
+            
+            <EmailForm />
 
-              Subject: <br>
-
-              Description: <br>  
           </div>
          
         </div>
@@ -37,7 +35,8 @@
 
 <script setup>
   
-  import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue';
+  import { ref } from 'vue';
+  import EmailForm from './EmailForm.vue'
 
   const isModalOpen = ref(false);
 
@@ -62,7 +61,6 @@
     background-color: red;
 
     opacity: 0.7;
-
   }
 
 </style>
