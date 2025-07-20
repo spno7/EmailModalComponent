@@ -4,8 +4,8 @@
 
 <template>
   
-  <h1 class="text-info">
-     Hello world
+  <h1 class="mt-3 text-info text-center">
+    Hello world
   </h1>
  
 </template>
