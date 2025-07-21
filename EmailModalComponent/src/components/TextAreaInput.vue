@@ -1,9 +1,9 @@
 <template>
   <div class="mb-3">
     
-    <!-- Display the label -->
+    <!-- Display field label -->
     <label v-if="label">
-      {{ label }}
+      <b> {{ label }} </b>
     </label>
 
     <textarea
@@ -16,7 +16,10 @@
       class="form-control rounded-md"
       :class="{ 'is-invalid': error }"
     />
-      
+  
+     <!-- Display error message -->
+    <div v-if="error" class="invalid-feedback d-block"> {{ error }} </div>
+
   </div>
 </template>
 
@@ -28,34 +31,42 @@
       type: String,
       required: true
     },
+
     label: { 
       type: String,
       default: ''
     },
+
     value: { 
       type: String,
       default: ''
     },
+
     placeholder: { 
       type: String,
       default: ''
     },
+
     required: { 
       type: Boolean,
       default: false
     },
+
     rows: { 
       type: [String, Number],
       default: 5
     },
+
     error: { 
       type: String,
       default: ''
     },
+
     showCharCount: { 
       type: Boolean,
       default: false
     },
+    
     maxLength: {
       type: [String, Number],
       default: 1000

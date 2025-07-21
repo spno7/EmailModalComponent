@@ -1,9 +1,9 @@
 <template>
   <div class="mb-3">
     
-    <!-- Display the label -->
+    <!-- Display field label -->
     <label v-if="label">
-      {{ label }}
+      <b> {{ label }} </b>
     </label>
     
     <input
@@ -18,7 +18,7 @@
     />
 
     <!-- Display error message -->
-    <div v-if="error" class="invalid-feedback d-block">{{ error }}</div>
+    <div v-if="error" class="invalid-feedback d-block"> {{ error }} </div>
 
   </div>
 </template>
