@@ -24,7 +24,13 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue';
+  import { ref, defineEmits } from 'vue';
+
+  const emit = defineEmits(['update:value']);
+
+  const handleInput = (event) => {
+    emit('update:value', event.target.value);
+  };
 
   // Component Props
   const props = defineProps({

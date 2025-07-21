@@ -85,7 +85,7 @@
         subject: subject.value,
         description: description.value
       };
-      console.log('Form Submitted !\n')
+      console.log('Form Submitted: \n')
       console.log(formData)    
     } 
     else {
