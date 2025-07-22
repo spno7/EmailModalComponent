@@ -133,6 +133,7 @@
         description: description.value,
         customerEmails: customerEmails.value
       };
+      
       console.log('Form Submitted: \n')
       console.log(formData)    
     } 

@@ -28,7 +28,7 @@
   const emit = defineEmits(['update:value']);
 
   const handleInput = (event) => {
-    emit('update:value', event.target.value); // <--- THIS IS CRUCIAL
+    emit('update:value', event.target.value); 
   };
 
   // Define props that this component accepts
@@ -79,7 +79,4 @@
     }
   });
 
-
 </script>
-
-

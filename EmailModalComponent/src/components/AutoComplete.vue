@@ -52,7 +52,7 @@
 
     </ul>
 
-    <!-- Display error message -->
+    <!-- Display Error message -->
     <div v-if="error" class="invalid-feedback d-block"> {{ error }} </div>
 
   </div>
@@ -99,7 +99,8 @@
 
   const highlightedIndex = ref(-1); 
 
-  const  API_ENDPOINT = 'https://686547495b5d8d0339808f5d.mockapi.io/spitogatos/api/customer-email-lookup';
+  // Api endpoint
+  const API_ENDPOINT = 'https://686547495b5d8d0339808f5d.mockapi.io/spitogatos/api/customer-email-lookup';
 
   let debounceTimeout = null;
   const DEBOUNCE_DELAY = 300; 
@@ -169,17 +170,20 @@
           selectedEmail = selected;
         
         }
+
         if (selectedEmail.toLowerCase() === customerEmail) {
           alreadySelected = true;
           break;
         }
       }
 
+
       return !alreadySelected && (
         customerName.includes(search) || customerEmail.includes(search)
       );
     });
 
+    // return the first 8
     return matches.slice(0, 8);
   
   });

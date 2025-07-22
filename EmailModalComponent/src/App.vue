@@ -5,6 +5,7 @@
       Send Email Application
     </h1>
     
+    <!-- Mount EmailModal Component -->
     <EmailModal />
 
   </div>
