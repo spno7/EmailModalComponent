@@ -16,9 +16,3 @@
 import EmailModal from "./components/EmailModal.vue"
 
 </script>
-
-
-
-<style scoped>
-
-</style>
