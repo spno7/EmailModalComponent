@@ -2,7 +2,7 @@
   <div id="app">  
     
     <h1 class="mt-3 text-info text-center">
-      Hello world
+      Send Email Application
     </h1>
     
     <EmailModal />

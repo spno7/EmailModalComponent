@@ -1,10 +1,12 @@
 <template>
   <div>
     
-    <!-- Button to open the Modal  -->
-    <button @click="openModal" class="btn btn-info rounded-md">
-      Send Email
-    </button>
+    <div style="display: flex; justify-content: center; align-items: center; height: 30vh;">
+      <!-- Button to open the Modal  -->
+      <button @click="openModal" class="btn btn-info rounded-md">
+        Send Email
+      </button>
+    </div>
 
     <div v-if="isModalOpen" class="modal d-block" tabindex="-1" role="dialog" >
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -28,7 +30,7 @@
       </div>
     </div>
 
-    <div v-if="isModalOpen" class="modal-backdrop show"></div>
+    <div v-if="isModalOpen" class="modal-backdrop show"> </div>
   
   </div>
 </template>
