@@ -49,7 +49,7 @@
       >
         {{ suggestion.name }} ({{ suggestion.email }})
       </li>
-      <!-- </li> -->
+
     </ul>
 
     <!-- Display error message -->
@@ -138,7 +138,7 @@
 
       allCustomers.value = await response.json();
     }
-    
+
     catch (err) {
       console.error('Failed to fetch the customers:', err);
     } 
@@ -237,7 +237,8 @@
 
   // Remove an email
   const removeEmail = (emailObj) => {
-    let emailStringToRemove;
+    
+    let emailString;
 
     if (typeof emailObj === 'object') {
       emailString = emailObj.email;
